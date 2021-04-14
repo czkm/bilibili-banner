@@ -1,0 +1,9 @@
+/dist/*
+/public/index.html
+
+**/*.md
+**/*.svg
+**/*.sh
+
+vendor
+lib
