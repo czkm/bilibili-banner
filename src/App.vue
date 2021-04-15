@@ -1,10 +1,11 @@
 <template>
   <div id="app">
     <animatedBanner
-      @change="(v) => (animatedBannerShow = v)"
       v-if="animatedBannerEnabled"
       :config="position"
+      @change="(v) => (animatedBannerShow = v)"
       :style="animatedBannerShow ? '' : `background-image: url(${bannerImg})`"
+      :class="animatedBannerShow ? '' : 'staticImg'"
     />
   </div>
 </template>
@@ -28,28 +29,25 @@ export default {
   computed: {
     bannerImg() {
       return require('./static/static.png')
-      // return './static/static.png'
     }
   },
   methods: {
     async animatedBanner() {
       // 优先加载展示静态banner
       const staticBannerImg = document.createElement('img')
-      console.log(staticBannerImg)
       staticBannerImg.src = this.bannerImg
-      await new Promise((r) => (staticBannerImg.onload = r))
-
+      await new Promise((resolve) => (staticBannerImg.onload = resolve()))
+      this.animatedBannerEnabled = true
       // 获取动画配置
       // try {
       //   this.animatedBannerConfig = this.position
-      this.animatedBannerEnabled = true
+      // this.animatedBannerEnabled = true
       // } catch (e) {
       //   console.error('animated_banner_config parse error')
       //   this.animatedBannerEnabled = false
       // }
     }
   },
-
   mounted() {
     this.animatedBanner()
   }
@@ -72,5 +70,22 @@ export default {
   background-repeat: no-repeat;
   background-position: center 0;
   background-size: cover;
+}
+.staticImg {
+  height: 9.375vw;
+  margin: 0 auto;
+  z-index: 0;
+  min-height: 155px;
+  height: 9.375vw;
+  min-width: 999px;
+  background-color: #f9f9f9;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+  justify-content: center;
+  background-repeat: no-repeat;
+  background-position: center 0;
+  background-size: cover;
+  min-width: 999px;
 }
 </style>
