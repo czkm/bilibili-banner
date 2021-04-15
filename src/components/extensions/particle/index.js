@@ -2,7 +2,7 @@
  * @Description:
  * @Author: zk-chen
  * @Date: 2021-04-13 15:47:37
- * @LastEditTime: 2021-04-15 16:42:40
+ * @LastEditTime: 2021-04-15 17:05:46
  * @LastEditors: zk-chen
  * @FilePath: /bilibili-banner/src/components/extensions/particle/index.js
  */
@@ -44,7 +44,7 @@ export default async container => {
   gl.pixelStorei(gl.UNPACK_FLIP_Y_WEBGL, true)
 
   const flower1 = await createParticles(gl, {
-    texture: 'https://github.com/czkm/img-folder/blob/master/bilibili-banner/flow1.png',
+    texture: 'https://i.postimg.cc/kg0kDDTz/flow1.png',
     // texture: flow1,
     scale: 1.18,
     numParticles: 100,
@@ -59,7 +59,7 @@ export default async container => {
   })
 
   const flower2 = await createParticles(gl, {
-    texture: 'https://github.com/czkm/img-folder/blob/master/bilibili-banner/flow2.png',
+    texture: 'https://i.postimg.cc/rp574cbm/flow2.png',
     // texture: flow2,
     scale: 1.18,
     numParticles: 100,

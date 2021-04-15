@@ -5311,7 +5311,7 @@ __webpack_require__.r(__webpack_exports__);
  * @Description:
  * @Author: zk-chen
  * @Date: 2021-04-13 15:47:37
- * @LastEditTime: 2021-04-15 16:42:40
+ * @LastEditTime: 2021-04-15 17:05:46
  * @LastEditors: zk-chen
  * @FilePath: /bilibili-banner/src/components/extensions/particle/index.js
  */
@@ -5360,7 +5360,7 @@ __webpack_require__.r(__webpack_exports__);
             gl.pixelStorei(gl.UNPACK_FLIP_Y_WEBGL, true);
             _context.next = 17;
             return Object(_particle__WEBPACK_IMPORTED_MODULE_2__["default"])(gl, {
-              texture: 'https://github.com/czkm/img-folder/blob/master/bilibili-banner/flow1.png',
+              texture: 'https://i.postimg.cc/kg0kDDTz/flow1.png',
               // texture: flow1,
               scale: 1.18,
               numParticles: 100,
@@ -5378,7 +5378,7 @@ __webpack_require__.r(__webpack_exports__);
             flower1 = _context.sent;
             _context.next = 20;
             return Object(_particle__WEBPACK_IMPORTED_MODULE_2__["default"])(gl, {
-              texture: 'https://github.com/czkm/img-folder/blob/master/bilibili-banner/flow2.png',
+              texture: 'https://i.postimg.cc/rp574cbm/flow2.png',
               // texture: flow2,
               scale: 1.18,
               numParticles: 100,
