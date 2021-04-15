@@ -1,5 +1,5 @@
 
-![效果]！！(https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/c62d59dcad5a447c996d8ae6ebe65b7d~tplv-k3u1fbpfcp-zoom-1.image)
+![效果](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/c62d59dcad5a447c996d8ae6ebe65b7d~tplv-k3u1fbpfcp-zoom-1.image)
 #### 先看看效果呗
 [github地址](https://czkm.github.io/bilibili-banner/)
 ## 起因
