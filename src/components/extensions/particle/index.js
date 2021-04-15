@@ -2,7 +2,7 @@
  * @Description:
  * @Author: zk-chen
  * @Date: 2021-04-13 15:47:37
- * @LastEditTime: 2021-04-14 11:48:09
+ * @LastEditTime: 2021-04-15 16:42:40
  * @LastEditors: zk-chen
  * @FilePath: /bilibili-banner/src/components/extensions/particle/index.js
  */
@@ -10,8 +10,8 @@
 import createParticles from './particle'
 import UniversalCamera from './UniversalCamera'
 import { vec3 } from 'gl-matrix'
-const flow1 = require('./shader/flow1.png')
-const flow2 = require('./shader/flow2.png')
+// const flow1 = require('./shader/flow1.png')
+// const flow2 = require('./shader/flow2.png')
 
 export default async container => {
   const containerRect = container.getBoundingClientRect()
@@ -45,8 +45,7 @@ export default async container => {
 
   const flower1 = await createParticles(gl, {
     texture: 'https://github.com/czkm/img-folder/blob/master/bilibili-banner/flow1.png',
-    texture: flow1,
-
+    // texture: flow1,
     scale: 1.18,
     numParticles: 100,
     particleBirthRate: 10,
@@ -61,8 +60,7 @@ export default async container => {
 
   const flower2 = await createParticles(gl, {
     texture: 'https://github.com/czkm/img-folder/blob/master/bilibili-banner/flow2.png',
-    texture: flow2,
-
+    // texture: flow2,
     scale: 1.18,
     numParticles: 100,
     particleBirthRate: 10,
