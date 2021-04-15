@@ -12316,6 +12316,36 @@ module.exports = function from(source /* , mapfn, thisArg */) {
 
 /***/ }),
 
+/***/ "a15b":
+/*!*******************************************************!*\
+  !*** ./node_modules/core-js/modules/es.array.join.js ***!
+  \*******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var $ = __webpack_require__(/*! ../internals/export */ "23e7");
+var IndexedObject = __webpack_require__(/*! ../internals/indexed-object */ "44ad");
+var toIndexedObject = __webpack_require__(/*! ../internals/to-indexed-object */ "fc6a");
+var arrayMethodIsStrict = __webpack_require__(/*! ../internals/array-method-is-strict */ "a640");
+
+var nativeJoin = [].join;
+
+var ES3_STRINGS = IndexedObject != Object;
+var STRICT_METHOD = arrayMethodIsStrict('join', ',');
+
+// `Array.prototype.join` method
+// https://tc39.es/ecma262/#sec-array.prototype.join
+$({ target: 'Array', proto: true, forced: ES3_STRINGS || !STRICT_METHOD }, {
+  join: function join(separator) {
+    return nativeJoin.call(toIndexedObject(this), separator === undefined ? ',' : separator);
+  }
+});
+
+
+/***/ }),
+
 /***/ "a4b4":
 /*!******************************************************************!*\
   !*** ./node_modules/core-js/internals/engine-is-webos-webkit.js ***!
